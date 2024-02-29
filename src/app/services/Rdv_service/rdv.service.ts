@@ -8,7 +8,7 @@ export class RdvService {
   constructor(private http: HttpClient) {}
   getRdvs(employeeId: string): Observable<any> {
     return this.http.get(
-      `http://localhost:3000/rendezvous/dates/${employeeId}`
+      `https://m1p10mean-saotra-rufinah-backoffice.vercel.app/rendezvous/dates/${employeeId}`
     );
   }
 }

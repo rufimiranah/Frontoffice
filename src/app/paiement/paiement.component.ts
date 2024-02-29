@@ -111,7 +111,10 @@ export class PaiementComponent {
     };
     console.log(paymentData);
     this.http
-      .post('http://localhost:3000/customers/paiement', paymentData)
+      .post(
+        'https://m1p10mean-saotra-rufinah-backoffice.vercel.app/customers/paiement',
+        paymentData
+      )
       .subscribe(
         (response) => {
           console.log(

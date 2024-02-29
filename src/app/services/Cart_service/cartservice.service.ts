@@ -93,7 +93,8 @@ export class CartserviceService {
     return this.paymentData;
   }
 
-  private baseUrl = 'http://localhost:3000/cart';
+  private baseUrl =
+    'https://m1p10mean-saotra-rufinah-backoffice.vercel.app/cart';
   createRdv(rdvData: any) {
     return this.http.post(`${this.baseUrl}/createrdv`, rdvData);
   }
@@ -109,7 +110,7 @@ export class CartserviceService {
   }
   getAllSousPrestations(id_service: string): Observable<Sous_Services[]> {
     return this.http.get<Sous_Services[]>(
-      `http://localhost:3000/prestations/sousprestations`
+      `https://m1p10mean-saotra-rufinah-backoffice.vercel.app/prestations/sousprestations`
     );
   }
 }

@@ -7,11 +7,14 @@ import { map } from 'rxjs/internal/operators/map';
   providedIn: 'root',
 })
 export class EmployeService {
-  private apiUrl = 'http://localhost:3000/cart';
+  private apiUrl =
+    'https://m1p10mean-saotra-rufinah-backoffice.vercel.app/cart';
   constructor(private http: HttpClient) {}
   getAllEmploye(): Observable<Employe_model[]> {
     return this.http
-      .get<{ Employe: Employe_model[] }>(`http://localhost:3000/cart/employe`)
+      .get<{ Employe: Employe_model[] }>(
+        `https://m1p10mean-saotra-rufinah-backoffice.vercel.app/cart/employe`
+      )
       .pipe(
         map((response) => response.Employe) // Extrait le tableau d'employés de la réponse
       );

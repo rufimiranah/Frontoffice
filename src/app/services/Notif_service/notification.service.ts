@@ -6,10 +6,15 @@ import { HttpClient } from '@angular/common/http';
 export class NotificationService {
   constructor(private http: HttpClient) {}
   getOffers() {
-    return this.http.get('http://localhost:3000/notif/offres');
+    return this.http.get(
+      'https://m1p10mean-saotra-rufinah-backoffice.vercel.app/notif/offres'
+    );
   }
 
   getRdvs(userId: string) {
-    return this.http.get('http://localhost:3000/notif/rdvs/' + userId);
+    return this.http.get(
+      'https://m1p10mean-saotra-rufinah-backoffice.vercel.app/notif/rdvs/' +
+        userId
+    );
   }
 }

@@ -12,7 +12,10 @@ export class HistoriqueComponent {
   ngOnInit() {
     const userId = localStorage.getItem('userId');
     this.http
-      .get('http://localhost:3000/historiques/rdvHistory/' + userId)
+      .get(
+        'https://m1p10mean-saotra-rufinah-backoffice.vercel.app/historiques/rdvHistory/' +
+          userId
+      )
       .subscribe(
         (response: any) => {
           this.rdvs = response as any[]; // Utilisez l'opérateur de cast ici

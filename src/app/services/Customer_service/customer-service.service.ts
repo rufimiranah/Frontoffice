@@ -15,7 +15,8 @@ export class CustomerService {
     localStorage.removeItem('token');
   }
 
-  private baseUrl = 'http://localhost:3000/customers';
+  private baseUrl =
+    'https://m1p10mean-saotra-rufinah-backoffice.vercel.app/customers';
 
   constructor(private http: HttpClient, private jwtHelper: JwtHelperService) {}
 
